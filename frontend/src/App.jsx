@@ -21,7 +21,7 @@ const App = () => {
       return;
     }
 
-    const response = await fetch('http://localhost:5000/create-order', {
+    const response = await fetch('https://payment-integration-8syu.onrender.com/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ amount: parseFloat(amount) }),
@@ -37,13 +37,13 @@ const App = () => {
       description: 'Pay securely with Razorpay. Fast, safe, and easy payments for everyone!',
       order_id: data.id,
       handler: function (response) {
-        alert('Payment Success! ✅');
+        alert('Payment Success');
         console.log(response);
       },
       prefill: {
-        name: 'Rahul Mishra',
-        email: 'test@example.com',
-        contact: '9999999999',
+        name: 'Md Tousif Alam',
+        email: 'mdtousifalam85@gmail.com',
+        contact: '7857024383',
       },
       theme: {
         color: '#3399cc',
@@ -57,7 +57,7 @@ const App = () => {
   return (
     <div className="payment-container">
       <div className="payment-card">
-        <h2 className="payment-title">💳 Razorpay Test Payment</h2>
+        <h2 className="payment-title">Razorpay Test Payment</h2>
         <p className="payment-desc">
           Experience seamless, secure, and lightning-fast payments with our modern gateway.<br />
           Enter the amount you wish to pay and click <b>Pay Now</b> to proceed.<br />
